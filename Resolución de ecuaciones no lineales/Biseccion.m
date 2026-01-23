@@ -26,5 +26,5 @@ if f(a)*f(b)<0
     end
     fprintf('\nEl valor de aproximado de x es: %.15f\n',double(c));  
 else 
-    fprintf('El intervalo no contiene a la raiz');
+    fprintf('\nEl intervalo no contiene a la raiz\n');
 end
