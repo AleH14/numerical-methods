@@ -17,8 +17,8 @@ else
     x3= x2 - (2*c)/(b+sqrt(b^2-4*a*c));
 end
 error = abs(x3 - x2);
-fprintf('n\t|x0\t\t\t\t\t|x1\t\t\t\t\t|x2\t\t\t\t\t|x3\t\t\t\t\t|error\n');
-fprintf('%d\t|%.15f\t|%.15f\t|%.15f\t|%.15f\t|%e\n',cont,double(x0),double(x1),double(x2),double(x3),double(error));
+fprintf('n\t|x0\t\tx\t\t\t|x1\t\t\t\t\t|x2\t\t\t\t\t|x3\t\t\t\t\t|a\t\t\t\t\t|b\t\t\t\t\t||c\t\t\t\t\t|error\n');
+fprintf('%d\t|%.15f\t|%.15f\t|%.15f\t|%.15f\t|%.15f\t|%.15f\t|%.15f\t|%e\n',cont,double(x0),double(x1),double(x2),double(x3),double(a),double(b),double(c),double(error));
 
 while error > tol && cont <100
     cont = cont +1;
@@ -34,6 +34,6 @@ while error > tol && cont <100
         x3= x2 - (2*c)/(b+sqrt(b^2-4*a*c));
     end
     error = abs(x3 - x2);
-    fprintf('%d\t|%.15f\t|%.15f\t|%.15f\t|%.15f\t|%e\n',cont,double(x0),double(x1),double(x2),double(x3),double(error));
+fprintf('%d\t|%.15f\t|%.15f\t|%.15f\t|%.15f\t|%.15f\t|%.15f\t|%.15f\t|%e\n',cont,double(x0),double(x1),double(x2),double(x3),double(a),double(b),double(c),double(error));
 end
 fprintf('\nEl valor aproximado de x es:%.15f\n',double(x3));
